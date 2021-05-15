@@ -13,6 +13,10 @@ body {
     position: relative;
     border: 1px solid #828282;
     border-radius: 16px;
+    overflow: hidden;
+}
+.card:not(:last-child) {
+    margin-bottom: 30px;
 }
 .card__bookmark {
     position: absolute;
@@ -50,6 +54,13 @@ body {
     color: #404040;
     font-size: 14px;
 }
+.card img {
+    width: 100%;
+}
+.card:nth-child(2) img {
+    width: 160%;
+    margin-left: -25%;
+} 
 
 .trip-time {
     font-size: 12px;
@@ -95,6 +106,7 @@ body {
     transform: rotate(-45deg);
     margin-right: 20px;
     margin-top: 6px;
+    min-width: 11px;
 }
 
 .card__trip-list {
@@ -146,4 +158,43 @@ body {
     min-width: 165px;
     max-height: 44px;
     text-decoration: none;
+}
+
+
+
+@media (min-width: 1060px) {
+    .container {
+        padding: 0;
+    }
+    .card {
+        border: 1px solid #8E8E8E;
+        border-radius: 15px;
+    }
+    .card img {
+        float:left;
+        width: auto;
+    }
+    .card__content {
+        padding: 16px 17px 21px 23px;
+        clear: left;
+    }
+    .card__text-list {
+        display: flex;
+    }
+    .card__trip-item {
+        margin-top: 0;
+    }
+    .card__trip-item:nth-child(2) {
+        background: #6BA6FF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        color: #FFFFFF;
+    }
+    .card__trip-list {
+        margin-left: 11px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .card__list {
+        margin-bottom: 24px;
+    }
 }
