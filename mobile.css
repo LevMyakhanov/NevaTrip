@@ -161,22 +161,72 @@ body {
 }
 
 
+@media (min-width: 500px) and (max-width: 1059px) {
+    .card:nth-child(2) img {
+        width: 100%;
+        margin-left: 0;
+    } 
+}
+
 
 @media (min-width: 1060px) {
     .container {
+        max-width: 1200px;
         padding: 0;
     }
     .card {
         border: 1px solid #8E8E8E;
         border-radius: 15px;
+        width: 1070px;
+    }
+    .card:nth-child(2) {
+        border: 1px solid #8E8E8E;
+        border-radius: 15px;
+        width: 1106px;
     }
     .card img {
-        float:left;
-        width: auto;
+        width: 85%;
+    }
+    .card:nth-child(2) img {
+        width: 77%;
+        margin-left: 0;
+    }
+    .card__bookmark {
+        background-color: #099CE8;
+        color: #FFFFFF;
+        min-width: 154px;
+    }
+    .card__bookmark_up {
+        top: 40px;
+        background-color: #FED74B;
+        border-radius: 0;
+        color: #323232;
+        min-width: 180px;
+        padding: 10px;
+        font-size: 16px;
     }
     .card__content {
         padding: 16px 17px 21px 23px;
-        clear: left;
+    }
+    .card__changer {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+    }
+    .card__header {
+        line-height: 34px;
+        font-size: 26px;
+        margin-bottom: 13px;
+    }
+    .trip-time {
+        order: 1;
+        font-size: 14px;
+    }
+    .card__changer > *:first-child {
+        margin-bottom: 0;
+    }
+    .card__item {
+        font-size: 18px;
     }
     .card__text-list {
         display: flex;
@@ -196,5 +246,23 @@ body {
     }
     .card__list {
         margin-bottom: 24px;
+    }
+    .card {
+        display: flex;
+    }
+    .card__trip-item:nth-child(4) {
+        display: none;
+    }
+    .card:nth-child(2) .card__trip-item:nth-child(4) {
+        display: block;
+    }
+    .row {
+        justify-content: left;
+    }
+    .row__text {
+        margin-right: 10px;
+    }
+    .row__href {
+        font-size: 18px;
     }
 }
