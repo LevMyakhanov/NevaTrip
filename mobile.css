@@ -161,6 +161,8 @@ body {
 }
 
 
+
+
 @media (min-width: 500px) and (max-width: 1059px) {
     .card:nth-child(2) img {
         width: 100%;
@@ -179,7 +181,8 @@ body {
         border-radius: 15px;
         width: 1070px;
     }
-    .card:nth-child(2) {
+    .card:nth-child(2),
+    .card:nth-child(3) {
         border: 1px solid #8E8E8E;
         border-radius: 15px;
         width: 1106px;
@@ -187,7 +190,8 @@ body {
     .card img {
         width: 85%;
     }
-    .card:nth-child(2) img {
+    .card:nth-child(2) img,
+    .card:nth-child(3) img {
         width: 77%;
         margin-left: 0;
     }
@@ -233,6 +237,7 @@ body {
     }
     .card__trip-item {
         margin-top: 0;
+        margin-bottom: 6px;
     }
     .card__trip-item:nth-child(2) {
         background: #6BA6FF;
@@ -264,5 +269,12 @@ body {
     }
     .row__href {
         font-size: 18px;
+    }
+}
+
+
+@media (min-width: 310px) and (max-width: 1069px) {
+    card:nth-child(3) {
+        display: none;
     }
 }
