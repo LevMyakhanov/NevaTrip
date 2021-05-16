@@ -238,7 +238,8 @@ body {
     .card__text-list {
         display: flex;
     }
-    .card__trip-item {
+    .card__trip-item,
+    .card-trip-more {
         margin-top: 0;
         margin-bottom: 6px;
     }
@@ -258,9 +259,9 @@ body {
     .card {
         display: flex;
     }
-    .card__trip-item:nth-child(4) {
+    /* .card__trip-item:nth-child(4) {
         display: none;
-    }
+    } */
     .card:nth-child(2) .card__trip-item:nth-child(4) {
         display: block;
     }
