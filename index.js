@@ -13,17 +13,21 @@ let hideTimes = function(timesParent) {
                 tripTimes[i].classList.add('trip-time_disable');
             }   
             elementMore.addEventListener("click", function () {
-                for (let i = 3; i < tripTimes.length; i++) {
-                    if(elementMore.textContent === "ещё..") {
+                if(elementMore.textContent === "ещё..") {
+                    for (let i = 3; i < tripTimes.length; i++) {
                         elementMore.textContent = "скрыть"
                         tripTimes[i].classList.remove('trip-time_disable');
                     }
-                    else {
-                        elementMore.textContent = "ещё.."
-                        tripTimes[i].classList.add('trip-time_disable');
+                }
+                else {
+                    for (let i = 3; i < tripTimes.length; i++) {
+                            elementMore.textContent = "ещё.."
+                            tripTimes[i].classList.add('trip-time_disable');
+                        }
+                        
                     }
                 }
-            });
+            );
             timesParent[j].appendChild(elementMore);
         }
     }

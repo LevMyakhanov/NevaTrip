@@ -114,6 +114,7 @@ body {
 
 .card__trip-list {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     margin-top: 10px;
     margin-bottom: 35px;
@@ -178,6 +179,7 @@ body {
     .container {
         max-width: 1200px;
         padding: 0;
+        margin: auto;
     }
     .card {
         border: 1px solid #8E8E8E;
@@ -239,7 +241,7 @@ body {
         display: flex;
     }
     .card__trip-item,
-    .card-trip-more {
+    .card__trip-more {
         margin-top: 0;
         margin-bottom: 6px;
     }
@@ -264,6 +266,9 @@ body {
     } */
     .card:nth-child(2) .card__trip-item:nth-child(4) {
         display: block;
+    }
+    .card__trip-item_disabled {
+        display: none;
     }
     .row {
         justify-content: left;
