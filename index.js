@@ -1,11 +1,24 @@
 let tripTimesLists = document.querySelectorAll('.card__trip-list');
 
-if (tripTimesLists.length > 4) {
-    let tripTimes = tripTimesLists.querySelectorAll('.card__trip-item');
-    for (let index = 0; index < tripTimes.length; index++) {
-        tripTimes[3].innerHTML = "ещё";
-        if (index > 3) {
-            
+
+
+let hideTimes = function(timesParent) {
+    for (let j = 0; j < timesParent.length; j++) {
+        let tripTimes = timesParent[j].querySelectorAll('.card__trip-item');
+        if(tripTimes.length > 4) {
+            for (let i = 0; i < tripTimes.length; i++) {
+                if(i > 3) {
+                    tripTimes[i].classList.add('trip-time_disable');
+                }
+            }
+            let elementMore = document.createElement("li");
+            elementMore.classList.add('card__trip-more');
+            elementMore.textContent = "ещё.."
+            tripTimes.append(elementMore);
         }
     }
 }
+
+hideTimes(tripTimesLists);
+
+console.log(tripTimes);
